@@ -26,7 +26,7 @@
         </h2>
 
         <div class="card__image-wrapper">
-          <img class="card__image" src="./images/image (1).png" alt="Машина" />
+          <img class="card__image" src="./images/image-1.png" alt="Машина" />
 
           <span class="card__label"> &lt;/HTML&gt; </span>
         </div>
@@ -88,11 +88,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-sepia"
-            src="./images/photo (1).jpg"
+            src="./images/photo-1.jpg"
             alt="кофе, торт, учеба"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/чтоэто?&gt; </span>
         </div>
 
         <div class="card__content">
@@ -154,11 +154,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-grayscale"
-            src="./images/photo (2).jpg"
+            src="./images/photo-2.jpg"
             alt="стол, блокнот, кофе, торт"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/20замечаний!&gt; </span>
         </div>
 
         <div class="card__content">
@@ -221,11 +221,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-brightness"
-            src="./images/photo (3).jpg"
+            src="./images/photo-3.jpg"
             alt="девушка в очках"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/ромашкatea&gt; </span>
         </div>
 
         <div class="card__content">
@@ -288,11 +288,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-contrast"
-            src="./images/photo (4).jpg"
+            src="./images/photo-4.jpg"
             alt="очки, планшет, грязная посуда"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/lite&gt; </span>
         </div>
 
         <div class="card__content">
@@ -356,11 +356,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-hue"
-            src="./images/photo (5).jpg"
+            src="./images/photo-5.jpg"
             alt="десерт, белые лилии, планшет"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/жаришко&gt; </span>
         </div>
 
         <div class="card__content">
@@ -421,11 +421,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-blur"
-            src="./images/photo (6).jpg"
+            src="./images/photo-6.jpg"
             alt="ноутбук, кофе"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label">&lt;/каким макаром?&gt;</span>
         </div>
 
         <div class="card__content">
@@ -489,11 +489,11 @@
         <div class="card__image-wrapper">
           <img
             class="card__image filter-multi"
-            src="./images/photo (7).jpg"
+            src="./images/photo-7.jpg"
             alt="рабочее место студента"
           />
 
-          <span class="card__label"> &lt;/HTML&gt; </span>
+          <span class="card__label"> &lt;/отчислят?&gt;</span>
         </div>
 
         <div class="card__content">
@@ -553,44 +553,37 @@
         </div>
       </article>
 
-    <button
-  class="button button__save"
-  type="button"
-  aria-controls="dialog"
-  onclick="window['save-dialog'].showModal()"
->
-  <img
-    class="floppy"
-    src="./svg/floppy.svg"
-    alt=""
-    aria-hidden="true"
-  />
+      <button
+        class="button button__save"
+        type="button"
+        aria-controls="save-dialog"
+        onclick="window['save-dialog'].showModal()"
+      >
+        <img class="floppy" src="./svg/floppy.svg" alt="" aria-hidden="true" />
 
-  <span class="button__text">Сохранить на память</span>
-</button>
+        <span class="button__text">Сохранить на память</span>
+      </button>
 
-<dialog class="dialog" id="save-dialog">
-  <div class="dialog__content">
-    <img
-      class="dialog__icon"
-      src="./svg/floppy.svg"
-      alt=""
-      aria-hidden="true"
-    />
+      <dialog class="dialog" id="save-dialog">
+        <div class="dialog__content">
+          <img
+            class="dialog__icon"
+            src="./svg/floppy.svg"
+            alt=""
+            aria-hidden="true"
+          />
 
-    <p class="dialog__text">
-      Вставьте дискету, чтобы продолжить
-    </p>
-  </div>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
 
-  <button
-    class="dialog__button button"
-    type="button"
-    onclick="window['save-dialog'].close()"
-  >
-    <span class="button__text">ОК</span>
-  </button>
-</dialog>
+        <button
+          class="dialog__button button"
+          type="button"
+          onclick="window['save-dialog'].close()"
+        >
+          <span class="button__text">ОК</span>
+        </button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>

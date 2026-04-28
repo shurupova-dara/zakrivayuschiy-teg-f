@@ -1,13 +1,10 @@
 :root {
-  /* шрифты */
+
   --font-main: "Inter-Variable", sans-serif;
   --font-accent: "PressStart2P", fantasy;
-
   --font-weight-text: 400;
   --font-weight-title: 715;
-
   --content-width: clamp(375px, 100%, 700px);
-
   --bg-image:
     repeating-linear-gradient(
       to bottom,
@@ -20,19 +17,14 @@
       rgb(211 211 211 / 0) 2px 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-
   --text-color: #000;
   --background-color: #fff;
   --accent-color: #000;
   --accent-color-text: #fff;
-
   --border-color: #000;
   --stroke-color: #fff;
-
   --button-shadow: 2px 2px 0 #000;
-
   --heart-contour-color: #000;
   --heart-body-color: red;
-
   --dialog-backdrop: rgb(0 0 0 / 75%);
 }

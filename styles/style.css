@@ -104,7 +104,7 @@
 }
 
 .filter-multi {
-  filter: grayscale(30%) blur(1px) contrast(50%);
+  filter: saturate(90%) blur(1px) contrast(100%);
 }
 
 .card__label {
