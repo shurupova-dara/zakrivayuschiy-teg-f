@@ -10,9 +10,9 @@
 
 .header {
   width: var(--content-width);
-  margin: 99px auto;
-  padding: clamp(30px, 5vw, 60px);
-  min-height: 368px;
+  margin: 100px auto;
+  padding-block: 128px;
+  padding-inline: 14px;
   border: 2px solid currentColor;
   background-color: #fff;
   display: flex;
@@ -74,7 +74,7 @@
 
 .card__image {
   width: 100%;
-  height: 700px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 }
@@ -138,8 +138,13 @@
 }
 
 .card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 38px;
   padding: 0;
-  border: none;
+  border: 2px solid transparent;
   background: transparent;
   cursor: pointer;
 }
@@ -152,13 +157,102 @@
   border: 2px solid #000;
 }
 
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+ 
+.card__like-button { 
+  width: 130px; 
+  height: 38px; 
+  border: 2px solid #000; 
+  background-color: #fff; 
+} 
+.like-icon:hover .main-body {
+  fill: var(--heart-contour-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-contour-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-body-color);
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon .contour {
+  fill: var(--heart-contour-color);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.is-liked .heart {
+  animation: heart 0.3s 0.1s ease-in;
+  animation-direction: normal;
+  transform-origin: center;
+}
+
+.sparks {
+  fill: var(--heart-body-color);
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in;
+  animation-direction: normal;
+  transform-origin: center;
+}
+
+.button__save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 335px;
+  min-height: 55px;
+   border: 2px solid #000;
+  box-sizing: border-box;
+}
+
 .button {
   position: relative;
   overflow: hidden;
   background-color: var(--background-color);
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  
 }
+
 
 .button::before {
   content: "";
@@ -191,80 +285,17 @@
   mix-blend-mode: difference;
 }
 
-.card__like-button {
-  width: 130px;
-  height: 38px;
-  border: 2px solid #000;
-  background-color: #fff;
-}
-
-.button__save {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 335px;
-  min-height: 55px;
-  margin: 52px auto 100px;
-  border: 2px solid #000;
-  background-color: #fff;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
+/* Иконка в кнопке сохранения */
 .floppy {
+ position: relative;
+  z-index: 2;
   width: 21px;
   height: 21px;
-  position: relative;
-  z-index: 2;
-  fill: #fff;
-}
-
-svg {
   flex-shrink: 0;
-}
-
-.like-icon .contour {
-  fill: var(--heart-contour-color);
-  transition: fill 0.2s linear;
-}
-
-.like-icon .main-body,
-.like-icon .core {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon .sparks {
-  opacity: 0;
-  fill: var(--heart-body-color);
-}
-
-.like-icon:hover .main-body,
-.like-icon:hover .core {
-  fill: var(--heart-contour-color);
-}
-
-.like-icon:active .main-body,
-.like-icon:active .core {
-  fill: var(--heart-body-color);
-}
-
-.like-icon.is-liked .heart {
-  animation: heart 0.3s ease-in;
-  transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s ease-in;
-  opacity: 1;
-}
-
-.like-icon.is-liked .contour,
-.like-icon.is-liked .main-body,
-.like-icon.is-liked .core {
-  fill: var(--heart-body-color);
+  color: var(--accent-color-text);
+  fill: currentColor;
+  mix-blend-mode: difference;
+ 
 }
 
 .dialog {
@@ -272,10 +303,12 @@ svg {
   padding: 30px;
   border: 2px solid #000;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .dialog::backdrop {
-  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: brightness(25%);
+  backdrop-filter: brightness(25%);
 }
 
 .dialog__content {
@@ -287,9 +320,13 @@ svg {
 }
 
 .dialog__icon {
+   position: relative;
+  z-index: 2;
   width: 39px;
   height: 39px;
-  fill: #000;
+  color: #000;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 .dialog__text {
@@ -297,54 +334,68 @@ svg {
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
+  margin: 0;
 }
 
-.dialog__button {
+.dialog-button {
   width: 100%;
   min-height: 38px;
   border: 2px solid #000;
   background-color: #fff;
-
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
 }
 
-.dialog__button::before {
+.dialog-button::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: #000;
-
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-in-out;
 }
 
-.dialog__button:hover::before {
+.dialog-button:hover::before {
   transform: scaleX(1);
 }
 
-.dialog__button .button__text {
+.dialog-button .button__text {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: #ffffff;
   mix-blend-mode: difference;
+
+}
+@media (width <= 375px) {
+ 
+
+  .header {
+    margin-top: 99px;
+    margin-bottom: 100px;
+    padding-block: 116px;
+    padding-inline: 14px;
+  
 }
 
-@media (width <= 375px) {
   .button__save {
-    width: 306px;
+  width: 306px;
     flex-direction: column;
+    height: 69px;
+    padding: 15px 0px 12px 0px;
+  
   }
 
-  .floppy {
-    width: 28px;
+  .floppy  {
+  width: 28px;
     height: 28px;
   }
 
+  
   .dialog {
-    max-width: 341px;
-    padding: 30px 40px;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+  }
+
+  .dialog-button {
+    min-inline-size: 293px;
   }
 }

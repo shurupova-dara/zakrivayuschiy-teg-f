@@ -21,10 +21,12 @@
   --background-color: #fff;
   --accent-color: #000;
   --accent-color-text: #fff;
+  --line-height-dialog: 1.5;
   --border-color: #000;
   --stroke-color: #fff;
   --button-shadow: 2px 2px 0 #000;
   --heart-contour-color: #000;
   --heart-body-color: red;
   --dialog-backdrop: rgb(0 0 0 / 75%);
+  --padding-header: 100px;
 }
