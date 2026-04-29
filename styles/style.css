@@ -157,7 +157,6 @@
   border: 2px solid #000;
 }
 
-
 .card__like-button {
   width: 130px;
   height: 38px;
@@ -165,13 +164,6 @@
   background-color: #fff;
 }
 
- 
-.card__like-button { 
-  width: 130px; 
-  height: 38px; 
-  border: 2px solid #000; 
-  background-color: #fff; 
-} 
 .like-icon:hover .main-body {
   fill: var(--heart-contour-color);
   transition: fill 0.3s 0.05s linear;
@@ -241,7 +233,7 @@
   gap: 8px;
   width: 335px;
   min-height: 55px;
-   border: 2px solid #000;
+  border: 2px solid #000;
   box-sizing: border-box;
 }
 
@@ -250,9 +242,7 @@
   overflow: hidden;
   background-color: var(--background-color);
   cursor: pointer;
-  
 }
-
 
 .button::before {
   content: "";
@@ -285,9 +275,8 @@
   mix-blend-mode: difference;
 }
 
-/* Иконка в кнопке сохранения */
 .floppy {
- position: relative;
+  position: relative;
   z-index: 2;
   width: 21px;
   height: 21px;
@@ -295,7 +284,6 @@
   color: var(--accent-color-text);
   fill: currentColor;
   mix-blend-mode: difference;
- 
 }
 
 .dialog {
@@ -320,7 +308,7 @@
 }
 
 .dialog__icon {
-   position: relative;
+  position: relative;
   z-index: 2;
   width: 39px;
   height: 39px;
@@ -363,33 +351,29 @@
   z-index: 2;
   color: #ffffff;
   mix-blend-mode: difference;
-
 }
-@media (width <= 375px) {
- 
 
+/* Медиа-запрос с исправленным форматированием */
+@media (max-width: 375px) {
   .header {
     margin-top: 99px;
     margin-bottom: 100px;
     padding-block: 116px;
     padding-inline: 14px;
-  
-}
-
-  .button__save {
-  width: 306px;
-    flex-direction: column;
-    height: 69px;
-    padding: 15px 0px 12px 0px;
-  
   }
 
-  .floppy  {
-  width: 28px;
+  .button__save {
+    width: 306px;
+    flex-direction: column;
+    height: 69px;
+    padding: 15px 0 12px 0;
+  }
+
+  .floppy {
+    width: 28px;
     height: 28px;
   }
 
-  
   .dialog {
     padding-inline-start: 32px;
     padding-inline-end: 32px;
