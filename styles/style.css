@@ -7,11 +7,12 @@
   background-size: cover;
   background-attachment: fixed;
 }
-
+/* я не понимаю, как мне это править,
+ у меня сходится в пиксельперфект идеально*/ 
 .header {
   width: var(--content-width);
-  margin: 100px auto;
-  padding-block: 128px;
+     margin: 100px auto;
+    padding-block: 129px;
   padding-inline: 14px;
   border: 2px solid currentColor;
   background-color: #fff;
@@ -167,9 +168,8 @@
 }
 
 .like-icon {
-transform: translateX(-1px);
+  transform: translateX(-1px);
 }
-
 
 .like-icon:hover .main-body {
   fill: var(--heart-contour-color);
@@ -211,10 +211,14 @@ transform: translateX(-1px);
   transition: fill 0.1s linear;
 }
 
-.like-icon .main-body,
-.like-icon .core {
+.like-icon .main-body {
   fill: transparent;
   transition: fill 0.3s linear;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .is-liked .heart {
@@ -244,12 +248,16 @@ transform: translateX(-1px);
   box-sizing: border-box;
 }
 
-
 .button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-color);
-  cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-color);
+    cursor: pointer;
+    padding-block-start: 15px;
+    padding-block-end: 15px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    text-wrap: nowrap;
 }
 
 .button::before {
@@ -362,9 +370,9 @@ transform: translateX(-1px);
 }
 
 @media (max-width: 375px) {
-   .header {
+  .header {
     margin: 100px auto;
-    padding-block: 116px;
+    padding-block: 121px;
     padding-inline: 14px;
   }
 
