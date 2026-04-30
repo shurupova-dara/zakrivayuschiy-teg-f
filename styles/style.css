@@ -7,12 +7,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
-/* я не понимаю, как мне это править,
- у меня сходится в пиксельперфект идеально*/ 
+/* надеюсь теперь всё правильно О_о */
 .header {
   width: var(--content-width);
-     margin: 100px auto;
-    padding-block: 129px;
+  margin: 100px auto;
+  padding-block: 129px;
   padding-inline: 14px;
   border: 2px solid currentColor;
   background-color: #fff;
@@ -141,10 +140,9 @@
 .card__icon-button {
   display: grid;
   place-items: center;
-
+  align-items: center;
   width: 39px;
   height: 39px;
-
   padding: 0;
   border: 2px solid transparent;
   background: transparent;
@@ -163,8 +161,11 @@
   height: 38px;
   border: 2px solid #000;
   background-color: #fff;
-  display: grid;
-  place-items: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .like-icon {
@@ -249,15 +250,15 @@
 }
 
 .button {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--background-color);
-    cursor: pointer;
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
-    text-wrap: nowrap;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color);
+  cursor: pointer;
+  padding-block-start: 15px;
+  padding-block-end: 15px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  text-wrap: nowrap;
 }
 
 .button::before {
@@ -372,7 +373,7 @@
 @media (max-width: 375px) {
   .header {
     margin: 100px auto;
-    padding-block: 121px;
+    padding-block: 115px;
     padding-inline: 14px;
   }
 
