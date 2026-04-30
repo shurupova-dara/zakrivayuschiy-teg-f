@@ -247,6 +247,10 @@
   width: 335px;
   border: 2px solid #000;
   box-sizing: border-box;
+    padding-block-start: 15px;
+  padding-block-end: 15px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
 }
 
 .button {
@@ -254,10 +258,6 @@
   overflow: hidden;
   background-color: var(--background-color);
   cursor: pointer;
-  padding-block-start: 15px;
-  padding-block-end: 15px;
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
   text-wrap: nowrap;
 }
 
